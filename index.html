@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Word</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #333;
+    }
+    input {
+      padding: 8px;
+      margin: 10px 0;
+      border: 2px solid #aaa;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enter the Secret Word</h1>
+  <input type="text" id="userInput" placeholder="Type here..." />
+  <button onclick="checkWord()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    const correctWord = "openai"; // you can change this
+
+    function checkWord() {
+      const input = document.getElementById("userInput").value.trim().toLowerCase();
+      const result = document.getElementById("result");
+
+      if (input === correctWord) {
+        result.textContent = "✅ Correct! Access granted.";
+        result.style.color = "green";
+      } else {
+        result.textContent = "❌ Incorrect. Try again!";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
