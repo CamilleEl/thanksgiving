@@ -1,1 +1,1 @@
-# guess-the-word
+# thanksgiving
