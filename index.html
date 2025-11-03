@@ -8,7 +8,7 @@
     /* --- General Page Styling --- */
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #fff7ed 0%, #fbe4c6 100%);
+      background-color: #F0C5A1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -31,18 +31,6 @@
     @keyframes fall {
       0% { transform: translateY(0) rotate(0deg); opacity: 1; }
       100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-    }
-
-    /* --- Card Container --- */
-    .card {
-      background: #fffaf3;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      padding: 40px 60px;
-      text-align: center;
-      border: 2px solid #f0c48a;
-      max-width: 400px;
-      animation: fadeIn 1.2s ease;
     }
 
     @keyframes fadeIn {
@@ -80,7 +68,7 @@
     button {
       padding: 10px 18px;
       border: none;
-      background-color: #d9985f;
+      background-color: #DE8133;
       color: white;
       border-radius: 10px;
       cursor: pointer;
@@ -114,8 +102,9 @@
   <img src="https://cdn-icons-png.flaticon.com/512/415/415730.png" class="leaf" style="left:90%; animation-duration:9s; animation-delay:1.5s;">
 
   <div class="card">
-    <h1>🍁 Happy Thanksgiving! 🍂</h1>
-    <h2>What is the secret code?</h2>
+    <h1>Happy Thanksgiving! 🍂</h1>
+    <h3>https://www.youtube.com/watch?v=dbFm1kGUje8</h3>
+    <h4>the secret code is what Snoopy and Woodstock eat...so what is the secret code?</h4>
     <input type="text" id="userInput" placeholder="Type here..." />
     <br />
     <button onclick="checkWord()">Submit</button>
@@ -123,18 +112,18 @@
   </div>
 
   <script>
-    const correctWord = "openai"; // change this word if you want
+    const correctWord = "turkey"; // change this word if you want
 
     function checkWord() {
       const input = document.getElementById("userInput").value.trim().toLowerCase();
       const result = document.getElementById("result");
 
       if (input === correctWord) {
-        result.textContent = "✅ Correct! Access granted.";
-        result.style.color = "#2b7a0b";
+        result.textContent = "Your next hint is to go to where we cook.";
+        result.style.color = "#DE8133";
       } else {
         result.textContent = "❌ Incorrect. Try again!";
-        result.style.color = "#b23b3b";
+        result.style.color = "#DE8133";
       }
     }
   </script>
